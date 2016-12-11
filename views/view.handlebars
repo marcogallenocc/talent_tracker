@@ -1,0 +1,679 @@
+{{> top-nav}}
+
+    <div class="back"><a href="#">Go back to Edit</a></div>
+
+    <div class="container view-container">
+        
+    <h1 class="section-header">
+            PREVIEW
+     </h1>
+    <div class="row">
+        <div class="col-lg-4">
+            <img src="/images/logopdf.png" alt="Talent tracker">
+        </div>
+        <div class="col-lg-8" style="border:1px solid #FF000;">
+            <div class="resultadobusqueda pull-right">
+             <div class="row">
+                 <div class="col-lg-6">                   
+             <div class="datospdf">
+               {{name}}<br >
+              {{job_position}}<br >
+              {{area}}
+             </div>
+                 </div>
+                 <div class="col-lg-6">
+                     <div class="foto">
+             <img src="/images/avatar.png"/>
+             </div>
+                 </div>
+            </div> 
+           </div>
+        </div>        
+    </div>    
+
+<div class="view-panel">
+    <div class="encabezado">
+            TALENT PREVIEW
+     </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="row">
+            <div class="col-lg-3">
+                <span class="tpdf">Potential</span>
+            </div>
+            <div class="col-lg-6">
+                <span class="cpdf">{{potential}}</span>
+            </div>
+            </div>
+            
+            <div class="row">
+            <div class="col-lg-3">
+                <span class="tpdf">Career</span>
+            </div>
+            <div class="col-lg-6">
+               <span class="cpdf"> {{career}}</span>
+            </div>
+            </div>
+            
+            <div class="row">
+            <div class="col-lg-3">
+                <span class="tpdf">Status</span>
+            </div>
+            <div class="col-lg-6">
+                <span class="cpdf">{{status}}</span>
+            </div>
+            </div>
+            
+            {{#checkSelector key_contributor "1"}}
+            <div class="row">
+            <div class="col-lg-3">
+                <span class="tpdf">Key Contributor</span>
+            </div>
+            <div class="col-lg-6">
+                <img src="/svg/check.svg" >
+                
+            </div>
+            </div>
+            {{else}}
+            <br>
+            {{/checkSelector}}
+            
+            {{#checkSelector specialist_critical "1"}}
+            <div class="row">
+            <div class="col-lg-3">
+                <span class="tpdf">Specialist critical</span>
+            </div>
+            <div class="col-lg-6">
+                <img src="/svg/check.svg" >
+            </div>
+            </div>
+            {{/checkSelector}}
+            
+            <div class="row">
+            <div class="col-lg-3">
+                <span class="tpdf">Probability of loss</span>
+            </div>
+            <div class="col-lg-6">
+                <span class="cpdf">{{probability_of_loss}}</span>
+            </div>
+            </div>
+            
+            <div class="row">
+            <div class="col-lg-3">
+                <span class="tpdf">Impact loss</span>
+            </div>
+            <div class="col-lg-6">
+                <span class="cpdf">{{impact_loss}}</span>
+            </div>
+            </div>
+            
+            <div class="row">
+            <div class="col-lg-3">
+                <span class="tpdf">Areas to develop</span>
+            </div>
+            <div class="col-lg-6">
+                <span class="cpdf">{{areas_to_develop}}</span>
+            </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <p class="tpdf">Strengths:</p>
+            <p>{{strengths}}</p>
+            <p>Relevant technical knowledge</p>
+            <p>{{relevant_technical_knowledge}}</p>
+        </div>
+    </div>
+</div>
+<div class="view-panel">
+    <div class="encabezado">
+            CAREER ASPIRATIONS
+     </div>
+    <div class="row">
+        <div class="col-lg-4">
+
+        
+        <h3 class="titulo">Business Unit</h3>
+
+{{#checkSelector comercial "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Comercial</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector marketing "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Marketing</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector administration "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Administration</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector finance "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Finance</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector human_resources "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Human Resources</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector product "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Product</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector it "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">IT</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+            
+        </div>
+        <div class="col-lg-4">
+           
+
+            
+            <!----- END ORIGINAL --->
+            
+
+
+            <h3 class="titulo">Areas of interest</h3>
+
+           
+               <h4 class="tpdf">Administration</h4>
+           
+
+{{#checkSelector top_management "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Top Management</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+
+{{#checkSelector accounting "1"}}
+     
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Accounting</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector accounting_audit "1"}}
+     
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Accounting Audit</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector payrolls "1"}}
+     
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Payrolls</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector legal "1"}}
+     
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Legal</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector corporate_it "1"}}
+     
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Corporate IT</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector human_resources "1"}}
+     
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Human Resources</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector financial_planning "1"}}
+     
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Financial Planning</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector marketing "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Marketing</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector public_relations "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Public Relations</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector digital_media "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Digital Media</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector customer_service "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Customer Service</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector technology_support "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Technology Support</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector tech_support "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Tech Suport</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+
+           
+               <h4 class="tpdf">Comercial & Operations</h4>
+           
+{{#checkSelector sales_analysis "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Sales Analysis</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector sales_hunter "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Sales Hunter</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector sales_smes "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Sales SME’s</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector sales_enterprise "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Sales Enterprise</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector sales_advertising "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Sales Advertising</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector sales_education "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Sales Education</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+           
+               <h4 class="tpdf">Technology</h4>
+           
+
+{{#checkSelector software_development "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Software Development</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector mobile_apps "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Mobile Apps</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector data_engineering "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Data Engineering</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector infraetructure "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Infraetructure</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector data_center "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Data Center</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+           <h4 class="tpdf">Product</h4>
+
+{{#checkSelector design "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Design</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector user_experience "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">User Experience</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector data_analyst "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Data Analyst</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+{{#checkSelector product "1"}}
+           <div class="row">
+           <div class="col-lg-3">
+               <span class="tpdf">Product</span>
+           </div>
+           <div class="col-lg-6">
+               <img src="/svg/check.svg" >
+           </div>
+           </div>
+           {{/checkSelector}}
+
+
+            
+        </div>
+        <div class="col-lg-4">
+            <h3 class="titulo">Mobility</h3>
+            <p class="tpdf">Movement time for areas of interest:</p>
+            <p>{{movement_time_areas_interest}}</p>
+            <p  class="tpdf">Movement time for international mobility:</p>
+            <p>{{movement_time_international_mobility}}</p>
+        </div>
+    </div>
+</div>
+        
+<div class="view-panel">
+    <div class="encabezado">
+            COMPETENCIES
+     </div>
+    <h3 class="titulo">Organization Skills</h3>
+    <div class="row">
+        <div class="col-lg-3 tpdf">
+            Representation
+        </div>
+        <div class="col-lg-9">{{representation}}</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 tpdf">
+            Strategic Vision
+        </div>
+        <div class="col-lg-9">{{strategic_vision}}</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 tpdf">
+            Business understanding and Capacity Analysis
+        </div>
+        <div class="col-lg-9">{{business_understanding}}</div>
+    </div>
+        </div>
+        
+        <div class="view-panel">
+    <div class="encabezado">
+            SUCESSORS
+     </div>
+    <h3 class="titulo">Option A</h3>
+    <div class="row">
+        <div class="col-lg-3 tpdf">
+            Sucessor
+        </div>
+        <div class="col-lg-9">{{succesor_a}}</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 tpdf">
+            Preparation time
+        </div>
+        <div class="col-lg-9">{{preparation_time_a}}</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 tpdf">
+            Comments
+        </div>
+        <div class="col-lg-9">{{comments_a}}</div>
+    </div>
+            
+            <h3 class="titulo">Option B</h3>
+    <div class="row">
+        <div class="col-lg-3 tpdf">
+            Sucessor
+        </div>
+        <div class="col-lg-9">{{succesor_b}}</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 tpdf">
+            Preparation time
+        </div>
+        <div class="col-lg-9">{{preparation_time_b}}</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            Comments
+        </div>
+        <div class="col-lg-9">{{comments_b}}</div>
+    </div>
+            
+            <h3 class="titulo">Option C</h3>
+    <div class="row">
+        <div class="col-lg-3 tpdf">
+            Sucessor
+        </div>
+        <div class="col-lg-9">{{succesor_c}}</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 tpdf">
+            Preparation time
+        </div>
+        <div class="col-lg-9">{{preparation_time_c}}</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 tpdf">
+            Comments
+        </div>
+        <div class="col-lg-9">{{comments_c}}</div>
+    </div>
+            
+            
+        </div>
+        <div class="">
+            <button type="submit" class="save">Download PDF</button>
+        </div>
+<!--end-->        
+</div>
+
+
+
+
+

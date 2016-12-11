@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "talent-tracker-2fd83",
+  "private_key_id": "86cfc434be3bb71cff9f38c497cc001d48267f1c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDGH+s6VfU8CvJm\niuN+z/XXqSuW6o/UUispy65+TgkZygV4NBcfjpx0ul2WmV2Et/1aXvYlKRHxh9bF\nrc38gp/1JVK96NMdCx7MnxVV7VBsNsjYp06QERjMRlMhvtzEyJWjRiIvQhdE1IJj\nT9krTITTxR/grN1zMU/GMAkE95KVGwLuUwOPhFcSHtH1TZ58ipzsvdlPqGPqVxqD\nK377mFS/bxcecSf4Q2Gyx7gXdgJ/u7fOcqyN+9+j2fCiDHwll7Dwfgj3yZO3c1gs\n8gFKX8awSIj/8Pbuu3fb4e8v0tnVgPAxwbl3Orvgf2CYSKTtk54mfS0Epj1LEjzJ\ngXFt1O4pAgMBAAECggEBAJchcgYl29PZZd7iw3bQm+/Ok/mjI+QKafKP9KNUU4zg\nlhuDYMApwR8pqopeov/Cefidx5XBJnbf7+0LD742xl3yApPrLl9RREVCdLv/MwHZ\nKIxb04oCALCSVIfBWBakC8FollsGR0mx8WRgXICy9f+0twRj2OkuDHRZ4Adx8tbZ\nUiI/PGFa3UvkJp1TwKaYTYolTl0MAn02rUz23231t4K++nl/5xKXLiGFSNqVTgOD\nFeeZ10btclYX44rJ0B53z5UNxP+iza5Pc78THjAnTc1zZsUDNp7d37lvl8yH4jlV\n7Le3hdbwdDNTmeFzt13nj57tevHc/TX1iC/3BIh8QIECgYEA/IxzscbKbU/CC9CS\nnVxXIrmlmDi8OKrSyTarcGw7hSPRxwUyVdY+Lp76p9Li2CrDPAZaO3UytFf6BAv4\nQ3Zy3letMffJqYM7PxHPEVfffwFfKflf/V5VY+gEc5kNo9jK/IQ9+CSNsL2rR1gD\n2ah4G+bmja4e4NFKnDgHeYF0Sb0CgYEAyNUQMxjcVPmebjjAQiss3E1Me+fMgREY\nhY2ylkxllzxLBnqxUcWb1HDmiFdtzQGEIZm4/tZQWi9ZwBU2NXJElOrYKY+WpQF5\n67j8hlGY6VAb3IEL0KC4rHmAZoLSPp/2MohWFwhpjjWslIjVMmpZ/tXeWGMllCzU\nn4QVnkqDvt0CgYEAmHzpwnbodRZKcT3PuQovZr03enEPXRvvyCSlYW1Ihvx4xrWh\njeidhSLi8ABKjgFL/utLAkmigvf38weTMJDNjOjdn6Ug86RUWqGTKMKpJROb9Uko\np2CVKIzIW1AXx024Sr5CeJkBoKz1RU+ki4DIfPhvTy7KYC6e4TKHeNssbvUCgYAx\nwPcecY5ETwL883pN6jxW55+HIsn7P6z/iTcxHQQeD4XWuRas13PfkYjLRj2hiDqf\nyGGYYKfPb+OgPqELZJ+w9O1Qfo4nmtIFn/KPpC9pvbrpSd8PdIHL2N4Ch25mrWJk\n6nnJgwADhzCWK8AFmWtqQrmu1AE/UEvsqOBiMruo0QKBgQCg/gsv4w1+3jhWHJ/L\nLcQf2p1HOYsiiXIbnIg5c/w9xjSArxWrAlrGFcXGcLgPK8yg5RSG1PGWfeZ57G0B\n1kENgYYrMkwZ0eDyDmNnW+jn0unXuZlLY9MJtfX+NkIRNynH+SVvhQfnmuVqS/Z/\nAWfCdSY4oD847aIOS0b9QXnsUQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "talent-tracker@talent-tracker-2fd83.iam.gserviceaccount.com",
+  "client_id": "107472821428955257989",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/talent-tracker%40talent-tracker-2fd83.iam.gserviceaccount.com"
+}

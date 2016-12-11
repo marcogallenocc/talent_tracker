@@ -1,0 +1,525 @@
+{{> top-nav}}
+    {{> search-bar}}
+
+    <div class="container sec-busqueda">
+        
+    <div class="row">
+        <div class="col-lg-8">
+        </div>
+        <div class="col-lg-4">
+       <!-- <h4>Personita</h4> -->
+        </div>
+        </div>
+        </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2">
+                {{> nav-menu}}
+            </div>
+      <div class="col-lg-10 main-container">
+      
+          <form action="/create" method="post" class="form-horizontal">
+        <div class="mpanel pan-visible" id="tr">
+              
+        <h1 class="section-header">
+            TALENT REVIEW
+        </h1>
+        <div class="titleleft">
+                  NEW
+        </div>
+        <div class="titleright">
+        ACTUAL STATUS
+        </div>
+
+          <div id="leftcontent">
+           <div class="form-group">
+            <label class="control-label tpdf"  >Name:</label>
+            <input type="text" name="name" id="name" value="{{name}}" class="general">
+          </div>
+
+          <div class="form-group">
+            <label class="control-label tpdf">Job position:</label>
+            <input type="text" name="job_position" id="job_position" value="{{job_position}}" class="general">
+            </div>
+            
+          <div class="form-group">
+            <label class="control-label tpdf">Área:</label>
+            <input type="text" name="area" id="area" vaue="{{area}}" class="general">
+          </div>
+          
+          
+            <div class="form-group">
+            <label for="potential">Potential:</label>
+            <div class="shape">
+              <select class="form-control" id="potential" name="potential">
+                <option value="high potencial" selected="">High potential</option>
+                <option value="potential">Potential</option>
+                <option value="consolidate" >Consolidated</option>
+            </select>
+            </div>
+            </div>
+
+          <div class="form-group">
+           <label for="career">Career:</label>
+           <div class="shape">
+           <select class="form-control" id="career" name="career">
+              <option selected="">Management</option>
+              <option>Specialist</option>
+              <option>Both</option>
+            </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="status" id="status">Status:</label>
+            <div class="shape">
+            <select class="form-control" data-with="Do not apply" id="status" name="status">
+              <option value="Next To Retirement">Next To Retirement</option>
+              <option value="Recent Entry">Recent Entry</option>
+              <option value="Attitude Problems">Attitude Problems</option>
+              <option value="Inability">Inability</option>
+              <option value="Recent Movement">Recent Movement</option>
+              <option value="Do Not Apply" selected="">Do Not Apply</option>
+            </select>
+            </div>
+          </div>
+      
+             <div id="ckecks">
+                  Key contributor:<input type="checkbox" class="check" name="key_contributor" id="key_contributor" value="1"> 
+                  Specialist Critical:<input type="checkbox" class="check" name="specialist_critical" id="specialist_critical" value="1" checked>
+              </div>
+          
+
+          <div class="form-group">
+            <label for="probability_of_loss" >Probability Of Loss:</label>
+            <div class="shape">
+            <select class="form-control" data-with="probability_of_loss" id="probability_of_loss" name="probability_of_loss">
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+            </div>
+            </div>
+           
+
+          <div class="form-group">
+            <label for="impact_loss">Impact Loss:</label>
+            <div class="shape">
+            <select class="form-control" data-with="impact_loss" id="impact_loss" name="impact_loss">
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+            </div>
+            </div>
+
+        <div class="form-group">
+        <label for="areas_to_develop">Areas To Develop:</label>
+        <textarea  name="areas_to_develop" id="areas_to_develop" rows="10" cols="50" value="{{areas_to_develop}}"></textarea>
+        </div>
+
+        <div class="form-group">
+        <label for="strengths">Strengths:</label>
+         <textarea  name="strengths" id="strengths" rows="10" cols="50" value="{{strengths}}"></textarea>
+        </div>
+
+        <div class="form-group">
+        <label for="relevant_technical_knowledge">Impact Loss</label>
+         <textarea  name="relevant_technical_knowledge" id="relevant_technical_knowledge" rows="10" cols="50" value="{{relevant_technical_knowledge}}"></textarea>
+         </div>
+
+      </div>        
+
+      <div id="rightcontent">
+      </div>
+
+      <div id="btn_cancel">
+           <button type="submit" class="cancel">Cancel</button>
+      </div>
+      <div id="btn_save">
+         <button type="submit" class="save">Save</button>
+      </div>
+
+    </div>
+        
+        <div class="mpanel pan-invisible" id="ca">
+              
+        <h1 class="section-header">
+            CAREER ASPIRATIONS
+        </h1>
+
+        <div class="titleleft">
+                  NEW
+        </div>
+        <div class="titleright">
+        ACTUAL STATUS
+        </div>
+
+
+        <div id="leftcontent">
+        <div><label class="subtitulo">Business Units</label></div>
+        <div id="checks">
+        <div class="form-group">
+        <div class="row">
+             <div class="col-lg-10">
+             <div id="checks_seccion1"> <span>Commercial:</span> <input type="checkbox" class="check" {{#checkSelector commercial "1"}} checked {{/checkSelector}} name="commercial" id="commercial" value="1"> 
+             <span>Marketing:</span> <input type="checkbox" class="check"  {{#checkSelector marketing "1"}} checked="checked" {{/checkSelector}} name="marketing" id="marketing" value="1" checked>
+             <span>Finance:</span><input type="checkbox" class="check" {{#checkSelector finance "1"}} checked="checked" {{/checkSelector}}  name="finance" id="finance" value="1" checked></div>
+             
+             <div id="checks_seccion2"><span>Administration:</span><input type="checkbox" class="check" {{#checkSelector administration "1"}} checked="checked" {{/checkSelector}} name="administration" id="administration" value="1">
+             <span>Human resources:</span><input type="checkbox" class="check" name="human_resources" id="human_resources" value="1"></div>
+
+            <div id="checks_seccion3"><span>Product:</span><input type="checkbox" class="check" {{#checkSelector product "1"}} checked="checked" {{/checkSelector}} name="product" id="product" value="1" checked>
+             <div>IT: <input type="checkbox" class="check" {{#checkSelector it "1"}} checked="checked" {{/checkSelector}} name="it" id="it" value="1" checked></div></div>
+
+             </div></div></div>
+         </div>
+
+         <label class="subtitulo">Areas Of Interest</label>
+
+         <div id="checks">
+         <div class="form-group">
+            <div class="col-lg-10">
+            <div id="checkbox_areas">
+            Top Management: <input type="checkbox" class="check" {{#checkSelector top_management "1"}} checked {{/checkSelector}} name=“top_management” id=“top_management” value="1"> 
+            </div>
+
+           
+  
+		  
+            <div id="checkbox_admin">
+			<fieldset class="checkboxes">
+            <span>Accounting: </span><input type="checkbox" class="check"  {{#checkSelector accounting "1"}} checked="checked" {{/checkSelector}} name="accounting" id="accounting" value="1" checked>
+
+            <span>Accounting Audit:</span><input type="checkbox" class="check" {{#checkSelector accounting_audit "1"}} checked="checked" {{/checkSelector}}  name="accounting_audit" id="accounting_audit" value="1" checked>
+    
+            <span>Payrolls:</span><input type="checkbox" class="check" {{#checkSelector payrolls "1"}} checked="checked" {{/checkSelector}} name="payrolls" id="payrolls" value="1">
+
+            <span>Legal:</span><input type="checkbox" class="check" {{#checkSelector legal "1"}} checked="checked" {{/checkSelector}} name="legal" id="legal" value="1">
+
+            <span>Corporate IT:</span><input type="checkbox" class="check" {{#checkSelector corporate_it "1"}} checked="checked" {{/checkSelector}} name="corporate_it” id="corporate_it” value="1" checked>
+      
+            <span>Human Resources:</span><input type="checkbox" class="check" {{#checkSelector human_resources "1"}} checked="checked" {{/checkSelector}} name="human_resources" id="human_resources" value="1" checked>
+
+            <span>Financial Planning:</span><input type="checkbox" class="check" {{#checkSelector financial_planning "1"}} checked="checked" {{/checkSelector}} name="financial_planning” id="financial_planning” value="1" checked>
+            </div>
+			</fieldset>
+
+            <div id="checkbox_admin2">
+            Marketing: <input type="checkbox" class="check" {{#checkSelector marketing "1"}} checked="checked" {{/checkSelector}} name="marketing” id="marketing” value="1" checked>
+       
+            <span>Public Relations: </span><input type="checkbox" class="check" {{#checkSelector public_relations "1"}} checked="checked" {{/checkSelector}} name="public_relations” id="public_relations” value="1" checked>
+
+            <span>Digital Media: </span><input type="checkbox" class="check" {{#checkSelector digital_media "1"}} checked="checked" {{/checkSelector}} name="digital_media” id="digital_media” value="1" checked>
+
+           <span>Customer Service: </span><input type="checkbox" class="check" {{#checkSelector customer_service "1"}} checked="checked" {{/checkSelector}} name="customer_service” id="customer_service” value="1" checked>
+
+            <span> Technology Support: </span><input type="checkbox" class="check" {{#checkSelector technology_support "1"}} checked="checked" {{/checkSelector}} name="technology_support” id="technology_support” value="1" checked>
+
+            <span> Tech Support:</span><input type="checkbox" class="check" {{#checkSelector tech_support "1"}} checked="checked" {{/checkSelector}} name="tech_support” id="tech_support” value="1" checked>
+            </div>
+
+     
+            <label >Commercial & Operations</label>
+            <div id="checkbox_commercial">
+             <span>Sales Analysis: <input type="checkbox" class="check"  {{#checkSelector sales_analysis "1"}} checked="checked" {{/checkSelector}} name="sales_analysis" id="sales_analysis" value="1" checked>
+         
+             <span>Sales Hunter: </span><input type="checkbox" class="check"  {{#checkSelector sales_hunter "1"}} checked="checked" {{/checkSelector}} name="sales_hunter" id="sales_hunter" value="1" checked>
+
+             <span>Sales Sme’s: <input type="checkbox" class="check"  {{#checkSelector sales_sme’s "1"}} checked="checked" {{/checkSelector}} name="sales_sme’s" id="sales_sme’s" value="1" checked>
+
+             <span>Sales Enterprise: </span><input type="checkbox" class="check"  {{#checkSelector sales_enterprise "1"}} checked="checked" {{/checkSelector}} name="sales_enterprise" id="sales_enterprise" value="1" checked>
+
+             <span>Sales Advertising: </span><input type="checkbox" class="check"  {{#checkSelector sales_advertising "1"}} checked="checked" {{/checkSelector}} name="sales_advertising" id="sales_advertising" value="1" checked></div>
+
+            <div id="checkbox_tec"><label>Technology</label>
+             <span>Sales Education: </span><input type="checkbox" class="check"  {{#checkSelector sales_education "1"}} checked="checked" {{/checkSelector}} name="sales_education" id="sales_education" value="1" checked>
+
+             <span>Software Development: </span><input type="checkbox" class="check"  {{#checkSelector software_development "1"}} checked="checked" {{/checkSelector}} name="software_development" id="software_development" value="1" checked>
+        
+             <span>Mobile Apps: </span><input type="checkbox" class="check"  {{#checkSelector mobile_apps "1"}} checked="checked" {{/checkSelector}} name="mobile_apps" id="mobile_apps" value="1" checked>
+
+             <span>Data Engineering: </span><input type="checkbox" class="check"  {{#checkSelector data_engineering "1"}} checked="checked" {{/checkSelector}} name="data_engineering" id="data_engineering" value="1" checked>
+
+             <span>Infraetructure: </span><input type="checkbox" class="check"  {{#checkSelector infraetructure "1"}} checked="checked" {{/checkSelector}} name="infraetructure" id="infraetructure" value="1" checked>
+ 
+             <span>Data Center: </span><input type="checkbox" class="check"  {{#checkSelector data_center "1"}} checked="checked" {{/checkSelector}} name="data_center" id="data_center" value="1" checked></div>
+
+            <div id="checkbox_product"><label>Product</label>
+             <span>Design: </span><input type="checkbox" class="check"  {{#checkSelector design "1"}} checked="checked" {{/checkSelector}} name="design" id="design" value="1" checked>
+
+            <span> User Experience:</span> <input type="checkbox" class="check"  {{#checkSelector user_experience "1"}} checked="checked" {{/checkSelector}} name="user_experience" id="user_experience" value="1" checked>
+            
+             <span>Data Analyst:</span><input type="checkbox" class="check"  {{#checkSelector data_analyst "1"}} checked="checked" {{/checkSelector}} name="data_analyst" id="data_analyst" value="1" checked>
+
+             <span>Product: </span><input type="checkbox" class="check"  {{#checkSelector product "1"}} checked="checked" {{/checkSelector}} name="product" id="product" value="1" checked></div>
+
+             </div></div>
+         </div>
+
+          <div class="form-group">
+          <label class="subtitulo">Movility</label>
+            <label for="movement_time_areas_interest" id="movement_time_areas_interest">Movement time for areas of interest:</label>
+            <div class="shape">
+            <select class="form-control" data-with="Do not apply" id="status" name="status">
+              <option value="Inmediate" selected >Inmediate</option>
+              <option valu="Short Time: Now To 12 Months">Short Time: Now To 12 Months</option>
+              <option value="Medium Term: 12 To 36 Months">Medium Term: 12 To 36 Months</option>
+              <option value="Long Term: More Than 36 Months">Long Term: More Than 36 Months</option>
+              <option valu="Do not apply">Do not apply</option>
+            </select>
+            </div></div>
+			
+			<div class="form-group">
+            <label for="possibility_of_development" id="possibility_of_development">Possibility of development:</label>
+            <div class="shape">
+            <select class="form-control" data-with="Do not apply" id="status" name="status">
+              <option value="Inmediate" selected >Inmediate</option>
+              <option valu="Short Time: Now To 12 Months">Short Time: Now To 12 Months</option>
+              <option value="Medium Term: 12 To 36 Months">Medium Term: 12 To 36 Months</option>
+              <option value="Long Term: More Than 36 Months">Long Term: More Than 36 Months</option>
+              <option valu="Do not apply">Do not apply</option>
+            </select>
+            </div></div>
+			
+			<div class="form-group">
+            <label for="attitude_problems" id="attitude_problems">Attitude Problems: </label>
+            <div class="shape">
+            <select class="form-control" data-with="Do not apply" id="status" name="status">
+              <option value="Inmediate" >Inmediate</option>
+              <option value="Review Match Vs Job Position And Job Description" >Review Match Vs Job Position And Job Description</option>
+              <option value="Stay In Current Position" >Stay In Current Position</option>
+              <option value="Promotion To High Position" >Promotion To High Position</option>
+              <option value="Resent Entry" >Resent Entry</option>
+              <option valu="Do not apply" selected >Do not apply</option>
+            </select>
+            </div></div>
+
+			<div class="form-group">
+            <label for="possibility_of_development" id="possibility_of_development">Time development movement possibility:</label>
+			<div class="shape">
+            <select class="form-control" data-with="Do not apply" id="status" name="status">
+              <option value="Inmediate" >Inmediate</option>
+              <option value="Review Match Vs Job Position And Job Description" >Review Match Vs Job Position And Job Description</option>
+              <option value="Stay In Current Position" >Stay In Current Position</option>
+              <option value="Promotion To High Position" >Promotion To High Position</option>
+              <option value="Resent Entry" >Resent Entry</option>
+              <option valu="Do not apply" selected >Do not apply</option>
+            </select>
+            </div></div>
+          </div>
+
+       
+       <div id="rightcontent">
+        </div>
+
+      <div id="btn_cancel">
+           <button type="submit" class="cancel">Cancel</button>
+      </div>
+      <div id="btn_save">
+         <button type="submit" class="save">Save</button>
+      </div>
+          
+        </div>
+
+        <div class="mpanel pan-invisible" id="com">
+              
+        <h1 class="section-header">
+            COMPETENCIES
+        </h1>
+        <div class="titleleft">
+                  NEW
+        </div>
+        <div class="titleright">
+        ACTUAL STATUS
+        </div>
+        <div id="leftcontent">
+		<label class="text_numeros">1</label>
+        <div class="form-group">
+            <label for="impact_loss">Representation:</label>
+            <div class="shape">
+            <select class="form-control" data-with="impact_loss" id="representation" name="representation">
+              <option value="1">Level 1</option>
+              <option value="2">Level 2</option>
+              <option value="3">Level 3</option>
+              <option value="4">Level 4</option>
+              <option value="5" selected >Level 5</option>
+            </select>
+            </div>
+        </div>
+		
+        <label class="text_numeros">2</label>
+		<div class="form-group">
+            <label for="impact_loss">Representation:</label>
+            <div class="shape">
+            <select class="form-control" data-with="impact_loss" id="strategic_vision" name="strategic_vision">
+              <option value="1">Level 1</option>
+              <option value="2">Level 2</option>
+              <option value="3">Level 3</option>
+              <option value="4">Level 4</option>
+              <option value="5" selected >Level 5</option>
+            </select>
+            </div>
+        </div>
+        
+		<label class="text_numeros">3</label>		
+        <div class="form-group">
+
+            <label for="impact_loss">Representation:</label>
+            <div class="shape">
+            <select class="form-control" data-with="impact_loss" id="business_understanding" name="business_understanding">
+              <option value="1">Level 1</option>
+              <option value="2">Level 2</option>
+              <option value="3">Level 3</option>
+              <option value="4">Level 4</option>
+              <option value="5" selected>Level 5</option>
+            </select>
+           </div>
+        </div>
+      </div>
+
+        <div id="rightcontent">
+       
+        </div>
+
+        <div id="btn_cancel">
+           <button type="submit" class="cancel">Cancel</button>
+        </div>
+        <div id="btn_save">
+           <button type="submit" class="save">Save</button>
+        </div>
+               
+        </div>
+
+
+       
+       <div class="mpanel pan-invisible" id="suc">
+              
+        <h1 class="section-header">
+            SUCESSORS
+        </h1>
+        <div class="titleleft">
+                  NEW
+        </div>
+        <div class="titleright">
+        ACTUAL STATUS
+        </div>
+		
+       <div id="leftcontent">
+             <div class="subtitulo">
+                <label>Option 1</label>
+              </div>
+		  <div id="select_sucesors">
+          <div class="form-group">
+              <label for="impact_loss">Sucesors:</label>
+              <div class="shape">
+              <select class="form-control" data-with="impact_loss" id="succesor_a" name="succesor_a">
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              </select>
+              </div></div>
+		 </div>
+		 
+		 <div class="form-group">
+              <label for="impact_loss">Preparation Time:</label>
+              <div class="shape">
+              <select class="form-control"  id="" name="">
+              <option value="ergerg5445">ergerg5445</option>
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              </select>
+              </div>
+		   </div>
+			
+			<div class="form-group">
+            <label for="txt_sucesor_b">Comments:</label>
+            <textarea  name="txt_sucesor_a" id="" rows="10" cols="50" value=""></textarea>
+			</div>
+			
+			  <div class="subtitulo">
+              <label>Option 2</label>
+              </div>
+		  <div id="select_sucesors">
+          <div class="form-group">
+              <label for="impact_loss">Sucesors:</label>
+              <div class="shape">
+              <select class="form-control" data-with="impact_loss" id="succesor_b" name="succesor_b">
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              </select>
+              </div></div>
+		 </div>
+		 <div class="form-group">
+              <label for="impact_loss">Preparation Time:</label>
+              <div class="shape">
+              <select class="form-control"  id="" name="">
+              <option value="ergerg5445">ergerg5445</option>
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              </select>
+              </div>
+		   </div>
+			
+			<div class="form-group">
+            <label for="txt_sucesor_c">Comments:</label>
+            <textarea  name="txt_sucesor_c" id="" rows="10" cols="50" value=""></textarea>
+			</div>
+
+			<div class="subtitulo"> 
+			<label>Option 3</label></div>
+			 <div id="select_sucesors">
+            <div class="form-group">
+
+              <label for="impact_loss">Sucesors:</label>
+              <div class="shape">
+              <select class="form-control" data-with="impact_loss" id="succesor_c" name="succesor_c">
+              <option value="fdgdf343df">fdgdf343df</option>
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              </select>
+              </div></div>
+		 </div>
+		 <div class="form-group">
+              <label for="impact_loss">Preparation Time:</label>
+              <div class="shape">
+              <select class="form-control"  id="" name="">
+                <option value="dfeferfe45">dfeferfe45</option>
+              <option ></option>
+              <option ></option>
+              <option ></option>
+              </select>
+              </div>
+		   </div>
+			
+			<div class="form-group">
+            <label for="txt_sucesor_c">Comments:</label>
+            <textarea  name="txt_sucesor_a" id="" rows="10" cols="50" value=""></textarea>
+			</div>
+			
+        </div>
+
+      <div id="rightcontent">
+      </div>
+
+      <div id="btn_cancel">
+           <button type="submit" class="cancel">Cancel</button>
+      </div>
+      <div id="btn_save">
+         <button type="submit" class="save">Save</button>
+      </div>
+
+        </div>
+              </form>  
+
+          </div>
+            </div>
+</div>
+    
+        

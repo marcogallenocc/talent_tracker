@@ -1,0 +1,46 @@
+ {{> top-nav}}
+<div id="containergeneral">
+    <div id="login">
+        <h2>Login with your<br>OCC Account
+        </h2>
+        <img src="svg/occlogo.svg" />
+        <hr>
+        <input type="button" id="btnLogin" class="save" value="Login">
+    </div>
+    <form id="formLogin" action="/login" method="POST">
+        <input type="hidden" id="h_user" name="h_user" value="">
+        <input type="hidden" id="h_uid" name="h_uid" value="">
+        <input type="hidden" id="h_email" name="h_email" value="">
+        <input type="hidden" id="h_photo" name="h_photo" value="">
+    </form>
+</div>
+
+<script>
+    var provider = new firebase.auth.GoogleAuthProvider();
+
+    $('#btnLogin').click(function() {
+        var user = null;
+        firebase.auth().signInWithPopup(provider).then(function(result) {
+		  // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+		  var token = result.credential.accessToken;		  
+		  // The signed-in user info.
+		  user = result.user;
+		  //console.log(user);
+		  $("#h_user").val(user.displayName);
+		  $("#h_uid").val(user.uid);
+		  $("#h_email").val(user.email);
+		  $("#h_photo").val(user.photoURL);
+		  $("#formLogin").submit();
+					  
+		}).catch(function(error) {
+		  // Handle Errors here.
+		  var errorCode = error.code;
+		  var errorMessage = error.message;
+		  // The email of the user's account used.
+		  var email = error.email;
+		  // The firebase.auth.AuthCredential type that was used.
+		  var credential = error.credential;
+		  // ...
+		});
+    });
+</script>
